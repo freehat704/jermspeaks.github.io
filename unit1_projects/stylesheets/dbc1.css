@@ -2,7 +2,7 @@
 
 /* Body */
 body {
-	background: linear-gradient(150deg, #322, #C94D58);
+	background: url('../images/repeat.jpg');
 	font-size: 16px;
 	font-family: 'Raleway', 'sans-serif';
 	color: #DDD;
@@ -13,9 +13,15 @@ strong {
 em {
 	font-style: italic;
 }
+#cover {
+	padding: 0;
+	margin: 0;
+	background-color: rgba(33, 10, 12, .8);
+	z-index: -1;
+}
 /* Top Title */
 .top-title {
-	margin: 30px 5% 0;
+	margin: 0 5%;
 	padding-top: 50px;
 	text-align: center;
 	background-color: rgba(238, 94, 98, .95);
@@ -128,6 +134,9 @@ nav ul li a:hover {
 	font-size: 1.15em;
 	padding: 5px 0;
 }
+.contact-head h5 {
+	margin-top: 20px;
+}
 .contact ul {
 	margin: 15px 0 20px 0;
 	list-style: none;
@@ -164,11 +173,16 @@ nav ul li a:hover {
 /* Copyright */
 #copyright {
 	background: #000;
-	padding: 0;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
 	margin: 0;
 	text-align: center;
 }
-
+#copyright h6 p {
+	padding-top: 5px;
+}
 /* Shadows */
 .top-title {
 	-webkit-box-shadow: inset 0px 3px 15px 0px rgba(0,0,0,0.4);
@@ -212,6 +226,7 @@ nav ul li a {
 	.why h4, .article h4 {
 	margin: 0 3% 10px;
 	padding: 2%;
+	font-size: 1.2em;
 	}
 	.why-title::first-letter, .article-title h3::first-letter {
 	font-size: 100%;
