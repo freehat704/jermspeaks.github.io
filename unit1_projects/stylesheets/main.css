@@ -43,13 +43,6 @@ body {
 .second-title h2 {
 	font-size: 2em;
 }
-/* Face Image */
-.face img {
-	margin: 5px auto;
-	display: block;
-	border: 2px solid black;
-	border-radius: 150px;
-}
 /* Navigation */
 nav {
 	margin: 0 15%;
@@ -59,7 +52,9 @@ nav ul {
 	list-style: none;
 }
 nav ul li {
-	float: left;
+	display: inline-block;
+	list-style-type: none;
+	padding-right: 10px;
 	margin: 0 40px 20px 0;
 }
 nav ul li a {
@@ -77,45 +72,20 @@ nav ul li a:hover {
 	color: #000;
 	background: #EEE;
 }
-/* Philsophy Content */
-.container {
-	clear: both;
-	background-color: rgba(142, 56, 58, .975);
-	margin: 0 15%;
-	border-radius: 20px;
-	height: 600px;
-	overflow: hidden;
-}
-.article-title h3 {
-	margin: 10px 10%;
-	padding: 5% 7% 0;
-	font-size: 1.75em;
-	text-align: center;
-}
-.article-title h3::first-letter {
-	font-size: 200%;
-}
-.article h4 {
-	margin: 0 7% 10px;
-	padding: 2%;
-	font-size: 1.5em;
-	height: 2px;
-	text-align: left;
-}
 /* Contact */
 .contact {
 	background-color: rgba(214, 84, 88, .95);
 	margin: 0 15%;
 	border-radius: 20px;
 	text-align: center;
-	height: 60px;
+	height: 100px;
 }
 .contact-head {
 	font-size: 1.15em;
 	padding: 5px 0;
 }
 .contact ul {
-	margin: 5px 0 20px 0;
+	margin: 0 0 20px 0;
 	list-style: none;
 }
 .contact ul li {
@@ -135,24 +105,18 @@ nav ul li a:hover {
 	color: #000;
 	background: #EEE;
 }
-.twitter a img, .facebook a img {
+.facebook a img, .twitter a img {
 	height: auto;
 	width: auto;
 	max-width: 20px;
 }
 /* Copyright */
 #copyright {
-	background: #000;
-	padding: 0;
-	margin: 0;
+	position: absolute bottom: 0;
+	background: #111;
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
 }
 
 /* Media Queries */
-@media (min-width: 360px) and (max-width: 759px) {
-	.container {
-		background-color: rgba(142, 56, 58, .975);
-		margin: 0 15%;
-		border-radius: 20px;
-		height: 950px;
-	}
-}

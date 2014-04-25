@@ -5,7 +5,15 @@ Float side bar and content area */
 
 /* Header, 
 
-/* Content area, 
+/* Content area */
+.container {
+	clear: both;
+	background-color: rgba(142, 56, 58, .975);
+	margin: 0 15%;
+	border-radius: 20px;
+	height: 400px;
+	overflow: scroll;
+}
 /* Sidebar, and a 
 
 /* Footer */
