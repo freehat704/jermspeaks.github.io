@@ -2,13 +2,17 @@
 
 /* Body */
 body {
-	background: url("../images/tarmac.jpg") 50% 30px #222 no-repeat;
-	background-attachment: fixed;
+	background: linear-gradient(150deg, #322, #C94D58);
 	font-size: 16px;
 	font-family: 'Raleway', 'sans-serif';
 	color: #DDD;
 }
-
+strong {
+	font-weight: 800;
+}
+em {
+	font-style: italic;
+}
 /* Top Title */
 .top-title {
 	margin: 30px 5% 0;
@@ -16,7 +20,7 @@ body {
 	text-align: center;
 	background-color: rgba(238, 94, 98, .95);
 	font-family: 'Droid Serif', 'serif';
-	border-top: 1px solid rgb(84,214,145);
+	border-top: 1px solid #521416;
 	border-radius: 100px 100px 0 0;
 }
 .top-title h1 {
@@ -44,24 +48,28 @@ body {
 	font-size: 2em;
 }
 /* Navigation */
+
 nav {
-	margin: 0 15%;
+	background: rgba(51, 12, 13, .75);
+	padding: 5px;
+	margin: 5px 0;
 }
 nav ul {
-	margin: 60px 0 20px 0;
+	margin: 2.5% 0 2.5% 15%;
 	list-style: none;
+	list-style-position: center;
 }
 nav ul li {
 	display: inline-block;
 	list-style-type: none;
 	padding-right: 10px;
-	margin: 0 40px 20px 0;
+	margin: 0 40px 0 0;
 }
 nav ul li a {
 	background-color: rgba(214, 84, 88, .95);
 	text-decoration: none;
 	color: #DDD;
-	border: 2px solid rgb(84,214,145);
+	border: 2px solid #0c2133;
 	border-radius: 1px;
 }
 nav ul li a {
@@ -75,17 +83,18 @@ nav ul li a:hover {
 /* Contact */
 .contact {
 	background-color: rgba(214, 84, 88, .95);
-	margin: 0 15%;
+	margin: 0 15% 10px;
 	border-radius: 20px;
 	text-align: center;
-	height: 100px;
+	padding-bottom: 1%;
+	height: auto;
 }
 .contact-head {
 	font-size: 1.15em;
 	padding: 5px 0;
 }
 .contact ul {
-	margin: 0 0 20px 0;
+	margin: 15px 0 20px 0;
 	list-style: none;
 }
 .contact ul li {
@@ -94,10 +103,10 @@ nav ul li a:hover {
 	padding-right: 10px;
 }
 .contact ul li a {
-	background-color: rgba(214, 84, 88, .95);
+	background-color: #521416;;
 	text-decoration: none;
 	color: #DDD;
-	padding: 3px;
+	padding: 8px;
 	border: 1px solid rgba(84,214,210, .9);
 	border-radius: 2px;
 }
@@ -105,18 +114,58 @@ nav ul li a:hover {
 	color: #000;
 	background: #EEE;
 }
-.facebook a img, .twitter a img {
+.facebook a img {
+	max-width: 20px;
+	height: auto;
+	width: auto;
+	margin-bottom: -3px;
+}
+.twitter a img {
 	height: auto;
 	width: auto;
 	max-width: 20px;
+	margin-bottom: -1px;
 }
 /* Copyright */
 #copyright {
-	position: absolute bottom: 0;
-	background: #111;
+	background: #000;
+	padding: 5px 0;
+	margin: 0;
 	text-align: center;
-	padding: 10px;
-	margin: 10px;
+}
+/* Box Shadows */
+.top-title {
+	-webkit-box-shadow: inset 0px 3px 15px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: inset 0px 3px 15px 0px rgba(0,0,0,0.4);
+	box-shadow: inset 0px 3px 15px 0px rgba(0,0,0,0.4);
+}
+.container, .contact {
+	-webkit-box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
+	box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
 }
 
+nav ul li a {
+	-webkit-box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);	
+}
 /* Media Queries */
+@media (min-width: 360px) and (max-width: 666px) {
+	nav ul {
+		margin: 2.5% 0 2.5% 15%;
+		list-style: none;
+	}
+	nav ul li {
+		display: block;
+		padding-right: 10px;
+		margin: 20px 0;
+	}
+	nav ul li a {
+		background-color: rgba(214, 84, 88, .95);
+		text-decoration: none;
+		color: #DDD;
+		border: none;
+		list-style-position: absolute center;
+	}
+}

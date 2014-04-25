@@ -14,10 +14,90 @@ Float side bar and content area */
 	height: 400px;
 	overflow: scroll;
 }
+.container h3 {
+	font-size: 1.5em;
+}
+.article h4 {
+	font-size: 1.2em;
+}
+.article-title h3::first-letter {
+	border: 1px solid black;
+	box-shadow: 0 0 10px #9ecaed;
+}
 /* Sidebar, and a 
 
 /* Footer */
+/* Contact */
+.contact {
+	background-color: rgba(214, 84, 88, .95);
+	margin: 0 15% 10px;
+	border-radius: 20px;
+	text-align: center;
+	padding-bottom: 1%;
+	height: auto;
+}
+.contact-head {
+	font-size: 1.15em;
+	padding: 5px 0;
+}
+.contact ul {
+	margin: 15px 0 20px 0;
+	list-style: none;
+}
+.contact ul li {
+	display: inline-block;
+	list-style-type: none;
+	padding-right: 10px;
+}
+.contact ul li a {
+	background-color: #521416;;
+	text-decoration: none;
+	color: #DDD;
+	padding: 8px;
+	border: 1px solid rgba(84,214,210, .9);
+	border-radius: 2px;
+}
+.contact ul li a:hover {
+	color: #000;
+	background: #EEE;
+}
+.facebook a img {
+	max-width: 20px;
+	height: auto;
+	width: auto;
+	margin-bottom: -3px;
+}
+.twitter a img {
+	height: auto;
+	width: auto;
+	max-width: 20px;
+	margin-bottom: -1px;
+}
+/* Copyright */
+#copyright {
+	background: #000;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
 
+/* Shadows */
+.top-title {
+	-webkit-box-shadow: inset 0px 3px 15px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: inset 0px 3px 15px 0px rgba(0,0,0,0.4);
+	box-shadow: inset 0px 3px 15px 0px rgba(0,0,0,0.4);
+}
+.container, .contact {
+	-webkit-box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
+	box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
+}
+
+nav ul li a {
+	-webkit-box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);	
+}
 /* Spans */
 /* Add padding, borders, and margins */
 /* Center your content area in the browser */
