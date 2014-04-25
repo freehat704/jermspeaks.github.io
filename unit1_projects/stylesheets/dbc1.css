@@ -1,23 +1,47 @@
 /* dbc1 css */
 body {
-	background: #333;
+	background-image: url("../images/tarmac.jpg");
+	background: #222;
 	font-size: 16px;
 }
 .top-title {
 	padding: 0;
 	margin: 0;
 	text-align: center;
+	background-color: #333;
+}
+.second-title {
+	background-color: #444;
+	text-align: center;
+}
+
+.face img {
+	margin: 0 40%;
+	border-radius: 100px;
+}
+.top-title h1 {
+	content: ;
+	border: 1px dotted blue;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #CCC;
 }
 h1 {
-	font-size: 1em;
+	font-size: 3em;
 }
 h2 {
 	font-size: 2em;
 }
 h3 {
+	font-size: 1.5em;
+}
+.article-title {
 
 }
-
+.article {
+	background-color: #555;
+}
+.article h3 {
+	margin: 0 10%;
+	padding: 10% 10%;
+}
