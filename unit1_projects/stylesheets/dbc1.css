@@ -1,4 +1,12 @@
 /* dbc1 css */
 body {
-	background: #000000;
+	background: #333;
+	font-size: 16px;
 }
+
+h1 {
+	font-size: 1.5em;
+	color: #CCC;
+}
+
+
