@@ -14,8 +14,7 @@ em {
 	font-style: italic;
 }
 #cover {
-	padding: 0;
-	margin: 0;
+	background-size: 100% auto;
 	background-color: rgba(33, 10, 12, .8);
 	z-index: -1;
 }
@@ -64,7 +63,7 @@ em {
 nav {
 	background: rgba(51, 12, 13, .75);
 	padding: 5px;
-	margin: 5px 0;
+	margin: 10px 0 5px;
 }
 nav ul {
 	margin: 2.5% 0 2.5% 15%;
@@ -83,10 +82,8 @@ nav ul li a {
 	color: #DDD;
 	border: 2px solid #0c2133;
 	border-radius: 1px;
-}
-nav ul li a {
 	font-size: 1.25em;
-	padding: 5px;
+	padding: 5px 10px;
 }
 nav ul li a:hover {
 	color: #000;
@@ -201,7 +198,7 @@ nav ul li a {
 	box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);	
 }
 /* Media Queries */
-@media (min-width: 360px) and (max-width: 800px) {
+@media (min-width: 360px) and (max-width: 850px) {
 	nav ul {
 		margin: 0;
 		padding: 0;
