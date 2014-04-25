@@ -46,27 +46,37 @@ body {
 	margin: 5px auto;
 	display: block;
 	border: 2px solid black;
-	border-radius: 100px;
+	border-radius: 150px;
 }
 /* Navigation */
-nav, .contact {
-	background-color: rgba(214, 84, 88, .95);
+nav {
 	margin: 0 15%;
-	border-radius: 20px;
 }
 nav ul, .contact ul {
-	text-align: center;
-	list-style: inline-block;
+	margin: 60px 0 20px 0;
+	list-style: none;
+}
+nav ul li {
+	float: left;
+	margin: 0 40px 20px 0;
 }
 nav ul li a, .contact ul li a {
+	background-color: rgba(214, 84, 88, .95);
 	text-decoration: none;
 	color: #DDD;
+	border: 2px solid yellow;
+}
+nav ul li a {
+	font-size: 1.25em;
+	padding: 5px;
 }
 nav ul li a:hover, .contact ul li a:hover {
 	color: #000;
+	background: #EEE;
 }
 /* Philsophy Content */
 .container {
+	clear: both;
 	background-color: rgba(142, 56, 58, .975);
 	margin: 0 15%;
 	border-radius: 20px;
@@ -88,6 +98,17 @@ nav ul li a:hover, .contact ul li a:hover {
 	font-size: 1.5em;
 	height: 2px;
 	text-align: center;
+}
+/* Contact */
+.contact {
+	background-color: rgba(214, 84, 88, .95);
+	margin: 0 15%;
+	border-radius: 20px;
+}
+.twitter a img {
+	height: auto;
+	width: auto;
+	max-width: 20px;
 }
 /* Copyright */
 #copyright {
