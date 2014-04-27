@@ -74,7 +74,7 @@ nav ul li {
 	display: inline-block;
 	list-style-type: none;
 	padding-right: 10px;
-	margin: 0 40px 0 0;
+	margin: 0 40px 20px 0;
 }
 nav ul li a {
 	background-color: rgba(214, 84, 88, .95);
@@ -93,7 +93,7 @@ nav ul li a:hover {
 .container {
 	clear: both;
 	background-color: rgba(142, 56, 58, .975);
-	margin: 0 15% 5px;
+	margin: 0 15% 15px;
 	border: 2px solid rgb(179,70,73);
 	border-radius: 20px;
 	overflow: hidden;
