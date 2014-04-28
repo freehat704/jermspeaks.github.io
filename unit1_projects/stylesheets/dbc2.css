@@ -3,7 +3,7 @@ Positioning
 A div that contains an image and a caption, and position the caption absolutely overtop the image.
 Float side bar and content area */
 
-/* Header, 
+/* Header */
 
 /* Content area */
 .container {
@@ -16,6 +16,33 @@ Float side bar and content area */
 }
 .container h3 {
 	font-size: 1.5em;
+}
+.objectives-title {
+	margin: 10px 10%;
+	padding: 5% 7% 0;
+	font-size: 1.75em;
+	text-align: center;
+}
+.objectives-list {
+	display: block;
+	list-style-type: decimal;
+	list-style-position: inside;
+	margin-left: 2em;
+}
+.objectives-list li {
+	clear: both;
+	list-style-type: upper-alpha;
+	margin-left: 1em;
+	padding: 5px;
+	line-height: 1.25em;
+}
+.second-list {
+	display: block;
+	font-size: .9em;
+	margin-left: 4em;
+}
+.second-list li {
+	font-size: 1em;
 }
 .article h4 {
 	font-size: 1.2em;

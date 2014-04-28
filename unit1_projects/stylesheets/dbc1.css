@@ -98,13 +98,15 @@ nav ul li a:hover {
 	border-radius: 20px;
 	overflow: hidden;
 }
-.why-title, .wireframe, .article-title h3 {
+.why-title, .wireframe, .wire-title, .article-title h3 {
 	margin: 10px 10%;
 	padding: 5% 7% 0;
 	font-size: 1.75em;
 	text-align: center;
 }
-
+.wireframe {
+	font-size: 2em;
+}
 .code-history {
 	margin-top: 15px;
 }
@@ -117,6 +119,21 @@ nav ul li a:hover {
 	font-size: 1.5em;
 	text-align: left;
 	line-height: 150%;
+}
+.site img {
+	max-width: 60%;
+	display: inline-block;
+	float: left;
+	margin: 0 1em;
+
+}
+.site h5 {
+	clear: both;
+	margin: 1em .75em 2em 25px;
+	padding-left: 5px;
+	display: inline-block;
+	vertical-align: bottom;
+	line-height: 1.25em;
 }
 /* Contact */
 .contact {
