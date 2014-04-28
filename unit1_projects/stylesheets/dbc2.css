@@ -127,6 +127,16 @@ nav ul li a:hover {
 	border: 1px solid black;
 	box-shadow: 0 0 10px #9ecaed;
 }
+.article h5 {
+	position: relative;
+	caption-side: top;
+}
+.article h5 span {
+	background: rgba(0,0,0, 0.7);
+}
+.article h5, .article img {
+	margin-left: 7%;
+}
 /* Footer Section */
 /* Contact */
 .contact {
