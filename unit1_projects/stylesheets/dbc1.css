@@ -98,7 +98,7 @@ nav ul li a:hover {
 	border-radius: 20px;
 	overflow: hidden;
 }
-.why-title, .article-title h3 {
+.why-title, .wireframe, .article-title h3 {
 	margin: 10px 10%;
 	padding: 5% 7% 0;
 	font-size: 1.75em;
