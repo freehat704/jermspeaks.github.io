@@ -2,7 +2,7 @@
 
 /* Body */
 body {
-	background-color: rgb(33, 10, 12);
+	background-color: #c0d9ec;
 	font-size: 16px;
 	font-family: 'Raleway', 'sans-serif';
 	color: #DDD;
@@ -14,45 +14,33 @@ em {
 	font-style: italic;
 }
 /* Top Title */
-.top-title {
-	margin: 0 5%;
-	padding-top: 50px;
+header {
+	padding: 25px 0 10px 0;
 	text-align: center;
 	background-color: rgba(238, 94, 98, .95);
 	font-family: 'Droid Serif', 'serif';
 	border-top: 1px solid #521416;
-	border-radius: 100px 100px 0 0;
 }
-.top-title h1 {
-	margin: auto;
+header h1 {
 	font-size: 3em;
 }
-.top-title h1 a {
+header h1 a {
 	text-decoration: none;
 	color: #DDD;
 }
-.top-title h1 a:hover {
+header h1 a:hover {
 	color: #222;
 }
-/* Subtitle */
-.second-title {
-	margin: 0 20%;
-	padding: 5px 0;
-	background-color: rgba(214, 84, 88, .95);
-	text-align: center;
-	border-top: 1px groove rgb(179,43,47);
-	border-radius: 0 0 100px 100px;
-	font-family: 'Droid Serif', 'serif';
+header hr {
+	background-color: #444;
 }
-.second-title h2 {
+header h2 {
 	font-size: 2em;
 }
 /* Navigation */
-
 nav {
-	background: rgba(51, 12, 13, .75);
+	background: rgb(214, 84, 88);
 	padding: 5px;
-	margin: 10px 0 5px;
 }
 nav ul {
 	margin: 2.5% 0 2.5% 15%;
@@ -76,15 +64,15 @@ nav ul li a {
 	font-size: 1.25em;
 	padding: 5px;
 }
-nav ul li a:hover {
+nav ul li a:hover{
 	color: #000;
 	background: #EEE;
 }
+
 /* Content */
-.container {
-	clear: both;
+.main-content {
 	background-color: rgba(142, 56, 58, .975);
-	margin: 0 15% 5px;
+	margin: 10px 5% 5px;
 	border: 2px solid rgb(179,70,73);
 	border-radius: 20px;
 	overflow: hidden;
@@ -95,6 +83,25 @@ nav ul li a:hover {
 	font-size: 1.5em;
 	text-align: left;
 	line-height: 150%;
+}
+.content h3 {
+	font-size: 1.5em;
+	padding: 5px;
+	text-align: center;
+	margin-bottom: 4%;
+}
+#intro, #linked {
+	font-size: 1em;
+	text-indent: 2em;
+}
+.other-links li {
+	text-indent: 4em;
+}
+/* Block Image */
+.image-height img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
 }
 /* Contact */
 .contact {
@@ -169,14 +176,8 @@ nav ul li a:hover {
 	-moz-box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
 	box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
 }
-
-nav ul li a {
-	-webkit-box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);
-	box-shadow: 5px 4px 25px 0px rgba(0,0,0,0.75);	
-}
 /* Media Queries */
-@media (min-width: 360px) and (max-width: 800px) {
+@media (min-width: 360px) and (max-width: 1110px) {
 	nav ul {
 		margin: 0;
 		padding: 0;
@@ -197,17 +198,19 @@ nav ul li a {
 	}
 }
 @media (min-width: 360px) and (max-width: 500px) {
-	.contact {
-	margin: 0 5% 5px;
-	}
 	.contact ul li {
 	display: block;
 	padding: 10px;
 	margin: 5px 0;
 	}
 }
-@media (min-width: 360px) and (max-width: 650px) {
-	.second-title {
-		font-size: .75em;
+@media screen and (min-width: 900px) {
+	.main-content {
+		width: 800px;
+		margin: 10px auto;
+	}
+	.contact {
+		width: 800px;
+		margin: 10px auto;
 	}
 }
