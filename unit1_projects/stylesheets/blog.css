@@ -1,6 +1,9 @@
 /* For Blog Posts only */
 
 /* Content */
+h5 {
+	font-size: .8em;
+}
 .blog-posts {
 	margin: 0 7%;
 	padding: 2%;
@@ -12,29 +15,52 @@
 	font-size: 1.5em;
 	padding: 5px;
 	text-align: center;
-	margin-bottom: 4%;
+	margin-bottom: 5px;
 }
-#intro, #linked {
+#intro, .blog-posts p {
 	font-size: 1em;
 	text-indent: 2em;
 }
-.other-links a {
-	color: #000;
+#inline, #inline-block {
+	margin-top: 2em;
+	text-indent: 0;
+	text-align: center;
+}
+.blog-posts h5 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.code, .inline-example, .inline-block-example {
+	background: #FFF;
+	border: 1px solid white;
+	color: black;
+}
+.inline-example p {
+	display: inline;
+}
+.inline-block-example img {
+	display: inline-block;
+}
+.block-example img {
+	display: block;
+}
+#last-week {
+	margin-top: 1em;
+	text-indent: 0;
+}
+#last-week a {
 	text-decoration: none;
-	padding: 10px;
-}
-.other-links a li {
-	text-indent: 4em;
-	border: 1px solid #000;
-	background: #d7e8f7;
+	color: white;
+	background: black;
 	padding: 5px;
-	margin-bottom: 5px;
 }
-.other-links a li:hover {
-	color: #FFF;
-	background: #000;
-	border: 1px solid #FFF;
+#last-week a:hover {
+	text-decoration: none;
+	color: black;
+	background: white;
 }
-.other-links a li:last-child {
-	margin-bottom: 0;
+@media only screen and (min-width: 900px) {
+	.main-content {
+		width: 90%;
+	}
 }
