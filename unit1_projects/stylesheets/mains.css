@@ -139,30 +139,33 @@ nav ul a li:hover{
 	margin: 15px 0 20px 0;
 	list-style: none;
 }
-.contact ul li {
-	display: inline-block;
-	list-style-type: none;
-	padding-right: 10px;
-}
-.contact ul li a {
+.contact ul a {
 	background-color: #521416;;
 	text-decoration: none;
 	color: #DDD;
 	padding: 8px;
 	border: 1px solid rgba(84,214,210, .9);
 	border-radius: 2px;
+	margin-right: 10px;
 }
-.contact ul li a:hover {
+.contact ul a:last-child {
+	margin-right: 0;
+}
+.contact ul a li {
+	display: inline-block;
+	list-style-type: none;
+}
+.contact ul a:hover {
 	color: #000;
 	background: #EEE;
 }
-.facebook a img {
+.facebook img {
 	max-width: 20px;
 	height: auto;
 	width: auto;
 	margin-bottom: -3px;
 }
-.twitter a img {
+.twitter img {
 	height: auto;
 	width: auto;
 	max-width: 20px;
@@ -193,7 +196,17 @@ nav ul a li:hover{
 	box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
 }
 /* Media Queries */
-@media only screen and (min-width: 360px) and (max-width: 1110px) {
+@media only screen and (min-width: 900px) {
+	.main-content {
+		width: 800px;
+		margin: 10px auto;
+	}
+	.contact {
+		width: 800px;
+		margin: 10px auto;
+	}
+}
+@media only screen and (max-width: 1110px) {
 	nav ul, nav ul a, nav ul li {
 		margin: 0;
 		padding: 0;
@@ -210,7 +223,7 @@ nav ul a li:hover{
 	}
 	nav ul a li {
 		display: block;
-		padding: 10px auto;
+		padding: 10px;
 		border: none;
 		margin-right: 0;
 		border-bottom: 1px dotted #222;
@@ -219,20 +232,38 @@ nav ul a li:hover{
 		border-bottom: none;
 	}
 }
-@media (min-width: 360px) and (max-width: 500px) {
-	.contact ul li {
-	display: block;
-	padding: 10px;
-	margin: 5px 0;
+@media screen and (max-width: 670px) {
+	.contact ul, .contact ul a, .contact ul li {
+		margin: 0;
+		padding: 0;
 	}
-}
-@media screen and (min-width: 900px) {
-	.main-content {
-		width: 800px;
-		margin: 10px auto;
+	.contact ul {
+		list-style: none;
+		text-align: center;
 	}
-	.contact {
-		width: 800px;
-		margin: 10px auto;
+	.contact ul a {
+		background-color: rgba(214, 84, 88, .95);
+		text-decoration: none;
+		color: #DDD;
+		border: none;
+		list-style-position: absolute center;
 	}
+	.contact ul a li {
+		display: block;
+		padding: 10px auto;
+		border: none;
+		margin-right: 0;
+		border-bottom: 1px dotted #222;
+		margin: 10px 0;
+		padding: 10px 0;
+	}
+	#last-contact {
+		border-bottom: none;
+		margin-bottom: 20px;
+	}
+	.contact ul a li:hover {
+	color: #000;
+	background: #EEE;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
 }
