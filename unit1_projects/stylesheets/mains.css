@@ -20,6 +20,7 @@ header {
 	background-color: rgba(238, 94, 98, .95);
 	font-family: 'Droid Serif', 'serif';
 	border-top: 1px solid #521416;
+	color: #333;
 }
 header h1 {
 	font-size: 3em;

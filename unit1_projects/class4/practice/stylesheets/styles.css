@@ -310,3 +310,34 @@ footer:after {
   font-weight: normal;
   font-style: normal;
 }
+
+/* Media Queries */
+@media only screen and (max-width:960px) {
+  body {
+    min-width: 220px;
+  }
+  /* Clear Floats */
+  h1, nav, nav ul li, #famous article.woman {
+    float: none;
+  }
+  nav {
+    margin-left: 0px;
+  }
+  nav ul {
+    list-style-type: none;
+  }
+  nav ul li a {
+    margin: 0 10px;
+    padding: 5px 10px;
+  }
+  #famous article.woman {
+    display: block;
+    min-height: 250px;
+    margin: 0 auto 5px;
+    padding: 5%;
+    width: 90%;
+  }
+  #famous article.woman img {
+    max-width: 450px;
+  }
+}
