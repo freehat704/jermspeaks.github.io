@@ -97,6 +97,10 @@ nav ul li a:hover{
 }
 .other-links li {
 	text-indent: 4em;
+	text-decoration: none;
+	color: #000;
+	border: 1px solid #000;
+	background: #c0d9ec;
 }
 /* Block Image */
 .image-height img {
