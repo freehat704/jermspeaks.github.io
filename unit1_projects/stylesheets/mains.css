@@ -44,28 +44,26 @@ nav {
 }
 nav ul {
 	display: block;
-	margin: 2.5% auto 2.5%;
+	margin: 2% 0 2%;
 	list-style: none;
 	text-align: center;
 }
-nav ul li {
+nav ul a {
+	background-color: rgba(214, 84, 88, .95);
+	text-decoration: none;
+	color: #DDD;
+	font-size: 1.25em;
+	padding: 5px;
+}
+nav ul a li {
 	display: inline-block;
 	list-style-type: none;
 	margin-right: 40px;
 	padding: 10px;
-}
-nav ul li a {
-	background-color: rgba(214, 84, 88, .95);
-	text-decoration: none;
-	color: #DDD;
-	border: 2px solid #0c2133;
+	border: 2px solid #c3dcf1;
 	border-radius: 1px;
 }
-nav ul li a {
-	font-size: 1.25em;
-	padding: 5px;
-}
-nav ul li a:hover{
+nav ul a li:hover{
 	color: #000;
 	background: #EEE;
 }
@@ -95,14 +93,25 @@ nav ul li a:hover{
 	font-size: 1em;
 	text-indent: 2em;
 }
-.other-links li {
-	text-indent: 4em;
-	border: 1px solid #000;
-	background: #c0d9ec;
-}
 .other-links a {
 	color: #000;
 	text-decoration: none;
+	padding: 10px;
+}
+.other-links a li {
+	text-indent: 4em;
+	border: 1px solid #000;
+	background: #d7e8f7;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.other-links a li:hover {
+	color: #FFF;
+	background: #000;
+	border: 1px solid #FFF;
+}
+.other-links a li:last-child {
+	margin-bottom: 0;
 }
 /* Block Image */
 .image-height img {
@@ -184,24 +193,30 @@ nav ul li a:hover{
 	box-shadow: inset 2px 1px 10px 1px rgba(0,0,0,0.75);
 }
 /* Media Queries */
-@media (min-width: 360px) and (max-width: 1110px) {
-	nav ul {
+@media only screen and (min-width: 360px) and (max-width: 1110px) {
+	nav ul, nav ul a, nav ul li {
 		margin: 0;
 		padding: 0;
+	}
+	nav ul {
 		list-style: none;
 		text-align: center;
 	}
-	nav ul li {
-		display: block;
-		padding-right: 10px;
-		margin: 20px 0;
-	}
-	nav ul li a {
+	nav ul a {
 		background-color: rgba(214, 84, 88, .95);
 		text-decoration: none;
 		color: #DDD;
-		border: none;
 		list-style-position: absolute center;
+	}
+	nav ul a li {
+		display: block;
+		padding: 10px auto;
+		border: none;
+		margin-right: 0;
+		border-bottom: 1px dotted #222;
+	}
+	#last-nav {
+		border-bottom: none;
 	}
 }
 @media (min-width: 360px) and (max-width: 500px) {
