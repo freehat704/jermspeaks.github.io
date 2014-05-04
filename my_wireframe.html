@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <meta charset="utf-8">
 
@@ -18,12 +17,16 @@
 		<hr>
 		<h2>Not An Artist At Large</h2>
 	</header>
-	<br>
-	<nav><ul>
-		<li><a href="index.html">Main Page</a>
-		<li><a href="#contact">Contact</a></li>
-	</ul></nav>
-
+	<hr>
+	<nav>
+		<ul>
+			<a href="#content"><li>Main Content</li></a>
+			<a href="#linked"><li>Other Pages from Week 2</li></a>
+			<a href="index_old.html"><li>Back To Week 1</li></a>
+			<a href="#contact"><li id="last-nav">Contact</li></a>
+		</ul>
+	</nav>
+	<hr>
 	<div class = "main-content">
 		<div class="image-height">
 			<img src="unit1_projects/images/my_wireframe.jpg" alt="wire frame of main website" />
@@ -31,16 +34,16 @@
 	</div>
 
 	<div class="contact" id="contact">
-		<div class="contact-head"><h5><strong>Contact Information</h5></strong></div>
+		<div class="contact-head"><h5><strong><u>Contact Information</u></h5></strong></div>
 		<ul>
-			<li><a href="mailto:jeremy@jermspeaks.com">&#9993; Email</a></li>
-			<li class="facebook"><a href="http://www.facebook.com/jermwong" target="_blank"><img src="unit1_projects/images/fb.png" alt="facebook" /> Facebook</a></li>
-			<li class="twitter"><a href="http://twitter.com/jermspeaks/" target="_blank"><img src="unit1_projects/images/twitter.png" alt="twitter" /> Twitter</a></li>
+			<a href="mailto:jeremy@jermspeaks.com"><li>&#9993; Email</li></a>
+			<a href="http://www.facebook.com/jermwong" target="_blank"><li class="facebook"><img src="unit1_projects/images/fb.png" alt="facebook" /> Facebook</li></a>
+			<a href="http://twitter.com/jermspeaks/" target="_blank"><li class="twitter" id="last-contact"><img src="unit1_projects/images/twitter.png" alt="twitter" /> Twitter</li></a>
 		</ul>
 	</div>
 	
-	<div id="copyright" class="grid-12">
+	<footer id="copyright" class="grid-12">
 		<h6><p>&copy; 2014 Craft By Zen Company. All Rights Reserved.</p></h6>
-	</div>
+	</footer>
 </body>
 </html>
