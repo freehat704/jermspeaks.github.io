@@ -317,18 +317,21 @@ footer:after {
     min-width: 220px;
   }
   /* Clear Floats */
-  h1, nav, nav ul li, #famous article.woman {
+  header, header h1, header nav, #famous article.woman {
     float: none;
+    margin: 0;
+    padding: 0;
   }
-  nav {
-    margin-left: 0px;
+  header h1, header nav {
+    text-align: center;
   }
-  nav ul {
+
+  header nav ul li a {
+    display: block;
+    margin: 0;
+  }
+  header nav ul {
     list-style-type: none;
-  }
-  nav ul li a {
-    margin: 0 10px;
-    padding: 5px 10px;
   }
   #famous article.woman {
     display: block;
