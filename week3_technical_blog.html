@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<html>
+
+<head>	
+	<title>Tecnikc@l Bl0g</title>
+	<link rel="stylesheet" type="text/css" href="unit1_projects/stylesheets/reset.css">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400, 800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="unit1_projects/stylesheets/mains.css">
+	<link rel="stylesheet" type="text/css" href="unit1_projects/stylesheets/blog.css">
+</head>
+
+<body>
+	<header>
+		<h1>Jeremy Wong</h1>
+		<hr>
+		<h2>Not An Artist At Large</h2>
+	</header>
+	<hr>
+	<nav>
+		<ul>
+			<a href="index.html"><li>Main Page</li></a>
+			<a href="#contact"><li id="last-nav">Contact</li></a>
+		</ul>
+	</nav>
+	<hr>
+	<div class="main-content">
+		<div class="blog-posts">
+			<h3><u>Reponse to the Fireside Chat</u></h3>
+
+			<h5>Date: May 6th, 2014</h5>
+			
+			<p id="intro">For a series of elements, particularly <code>div</code> and lists, you can have them display inline, inline-block, or block. This is done in CSS and uses the display property. Let’s go into detail about each of these.</p>
+
+			<p id="block"><strong>Block</strong></p>
+			<p>Block is by default for display, and for each element, the subsequent element will break a line. Take a look at the example below.</p>
+
+			<div class="block-example">
+				<img src="http://i.imgur.com/PxKbNMW.gif" alt="drop solution gif" />
+				<img src="http://i.imgur.com/AKKWfmM.gif" alt="music vest gif" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<img src="http://i.imgur.com/uFDk5NU.gif" alt="baby mop gif" />
+				<img src="http://i.imgur.com/PuGoP.gif" alt="donut gif" />
+			</div>
+
+			<p>If we want to have this inline with each other instead of breaking, we will need a different parameter for the display. We will come back to this example later.</p>
+
+			<p id="inline"><strong>Inline</strong></p>
+
+			<p>Say you have a bunch of paragraph tags and you wanted to combine them all into one paragraph. That's where inline is the most helpful. Take a look at this code below.<p>
+
+			<div class="code">
+				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
+				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
+				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
+				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
+			</div>
+
+			<p>If we wrap this in its own div, we can combine all paragraphs into one paragraphs if we assign the display to inline via CSS.</p>
+
+			<div class="code">
+				<p>.code {display: inline;}</p>
+			</div>
+
+			<p>If you take a look at the output of this, you get the following.</p>
+
+			<div class="inline-example">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
+			<p>However, if you have an image and you need it to be inline with the text, there will be issues with alignment. The images size will cause the text to have offocentered line height since it can’t have a width and height set and it will not respect top and bottom margins and padding.</p>
+			<p>Here is an example of the inline feature amongst some text:</p>
+			<p>I've repeated this code three times:</p>
+			<div class="code">
+				<p>&lt;img src="http://i.imgur.com/PxKbNMW.gif" alt="drop solution gif" /&gt;</p>
+				<p>&lt;img src="http://i.imgur.com/AKKWfmM.gif" alt="music vest gif" /&gt;</p>
+				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
+				<p>&lt;img src="http://i.imgur.com/uFDk5NU.gif" alt="baby mop gif" /&gt;</p>
+				<p>&lt;img src="http://i.imgur.com/PuGoP.gif" alt="donut gif" /&gt;</p>
+			</div>
+			<p>Here is the output:<p></code>
+			<div class="inline-example">
+				<img src="http://i.imgur.com/PxKbNMW.gif" alt="drop solution gif" />
+				<img src="http://i.imgur.com/AKKWfmM.gif" alt="music vest gif" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<img src="http://i.imgur.com/uFDk5NU.gif" alt="baby mop gif" />
+				<img src="http://i.imgur.com/PuGoP.gif" alt="donut gif" />
+			</div>
+			<p>As you can see, the text and the images do not respect the margins and padding. To solve this, we have inline-block.</p>
+			<br>
+			<p id="inline-block"><strong>Inline-Block</strong></p>
+
+			<p>Inline-blocks respects the text between the images for the margins and padding all around. Using the same example code as above, but changing the parameter of display to inline-block, the text doesn't change its line height because of the size of the images.</p>
+
+			<div class="code">
+				<p>.code {display: inline-block;}</p>
+			</div>
+
+			<p>Here is an example of a images with the inline-block feature. This is broken up with text after two images. Warning, hilarity ensues via Reddit's <a href="http://www.reddit.com/r/wheredidthesodago/" id="wheredidthesodago">r/wheredidthesodago</a>.</p>
+			<br>
+			<div class="inline-block-example">
+				<img src="http://i.imgur.com/PxKbNMW.gif" alt="drop solution gif" />
+				<img src="http://i.imgur.com/AKKWfmM.gif" alt="music vest gif" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<img src="http://i.imgur.com/uFDk5NU.gif" alt="baby mop gif" />
+				<img src="http://i.imgur.com/PuGoP.gif" alt="donut gif" />
+			</div>
+			<p>Instead of having the images as their own blocks, if left by default (the block parameter is default for display in CSS), the images are inline to each other. The text gets its own line because I separated it with a paragraph tag, but everything is now properly justified. If you want to learn other solutions to this problem, I suggest you look up flexboxes.</p>
+			<br>
+			<hr>
+			<p id="last-week"><a href="week1_technical_blog.html">Last Week's Post</a></p>
+		</div>
+	</div>
+
+	<div class="contact" id="contact">
+		<div class="contact-head"><h5><strong><u>Contact Information</u></h5></strong></div>
+		<ul>
+			<a href="mailto:jeremy@jermspeaks.com"><li>&#9993; Email</li></a>
+			<a href="http://www.facebook.com/jermwong" target="_blank"><li class="facebook"><img src="unit1_projects/images/fb.png" alt="facebook" /> Facebook</li></a>
+			<a href="http://twitter.com/jermspeaks/" target="_blank"><li class="twitter" id="last-contact"><img src="unit1_projects/images/twitter.png" alt="twitter" /> Twitter</li></a>
+		</ul>
+	</div>
+	
+	<footer id="copyright" class="grid-12">
+		<h6><p>&copy; 2014 Craft By Zen Company. All Rights Reserved.</p></h6>
+	</footer>
+</body>
+</html>
+
+<!-- Technical Blog stuff:
+	
+	-->
