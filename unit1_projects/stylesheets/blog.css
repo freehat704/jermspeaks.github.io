@@ -21,6 +21,9 @@ h5 {
 	font-size: 1em;
 	text-indent: 2em;
 }
+.blog-image {
+	text-align: center;
+}
 #inline, #inline-block, #block {
 	margin-top: 2em;
 	text-indent: 0;

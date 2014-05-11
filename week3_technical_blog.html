@@ -28,92 +28,23 @@
 	<hr>
 	<div class="main-content">
 		<div class="blog-posts">
-			<h3><u>Reponse to the Fireside Chat</u></h3>
+			<h3><u>Javascript the Great!</u></h3>
 
-			<h5>Date: May 6th, 2014</h5>
+			<h5>Date: May 11th, 2014</h5>
 			
-			<p id="intro">For a series of elements, particularly <code>div</code> and lists, you can have them display inline, inline-block, or block. This is done in CSS and uses the display property. Let’s go into detail about each of these.</p>
+			<p id="intro">Javascript is a programming language that interacts with the browser on the user end (this means you!). But it has no use unless you pair it with the other aspects of the web on the user end, HTML and CSS.</p>
+			<div class="blog-image"><img src="http://1.bp.blogspot.com/-DEJOj4wKMOE/UNhxSB-QlQI/AAAAAAAAAEg/4J01k0tvaI0/s640/htmlcssjava.png" alt="Logos for HTML, CSS, and Javascript" /></div>
 
-			<p id="block"><strong>Block</strong></p>
-			<p>Block is by default for display, and for each element, the subsequent element will break a line. Take a look at the example below.</p>
+			<p>These three elements are backed by the W3C and works cross-browsers, including mobile browsers. Some features such as semantic web elements (new tags for HTML, under HTML5) are under review by the W3C for support, making it even easier to read. The same is happening with javascript with libraries like jQuery.</p>
 
-			<div class="block-example">
-				<img src="http://i.imgur.com/PxKbNMW.gif" alt="drop solution gif" />
-				<img src="http://i.imgur.com/AKKWfmM.gif" alt="music vest gif" />
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<img src="http://i.imgur.com/uFDk5NU.gif" alt="baby mop gif" />
-				<img src="http://i.imgur.com/PuGoP.gif" alt="donut gif" />
-			</div>
+			<p>HTML provides the structure while CSS provides the presentation. Javascript provides the functionality, or the behavior, of a website. It remains its own file on a webpage, and is accessed by your web broswer, meaning a broswer does not need to rely on this to load a webpage in case there are errors in the code. CSS is starting to include things like animation, but javascript does most of the heavy lifting. And when you want to interact with the code with Chrome's console, it's not as easy to debug.</p>
 
-			<p>If we want to have this inline with each other instead of breaking, we will need a different parameter for the display. We will come back to this example later.</p>
+			<p>Say you want to create something like a dropdown menu. Well, with javascript, you can do that. If you think about what actually happens, you click a menu button and then the menu appears below the button, allowing you to select different parts of the website. JAvascript does this by taking the input of the user's access to this button and returns the menu.</p>
 
-			<p id="inline"><strong>Inline</strong></p>
+			<p>As humans, we want our environment to be interactive to us. Javascript allows that interactivity. Without this interaction, this webpage is nothing more than a really nice book with images and text. Next time you go on a webpage and you interact with it, you'll have more appreciation for what javascript does for us.</p>
 
-			<p>Say you have a bunch of paragraph tags and you wanted to combine them all into one paragraph. That's where inline is the most helpful. Take a look at this code below.<p>
-
-			<div class="code">
-				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
-				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
-				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
-				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
-			</div>
-
-			<p>If we wrap this in its own div, we can combine all paragraphs into one paragraphs if we assign the display to inline via CSS.</p>
-
-			<div class="code">
-				<p>.code {display: inline;}</p>
-			</div>
-
-			<p>If you take a look at the output of this, you get the following.</p>
-
-			<div class="inline-example">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<p>However, if you have an image and you need it to be inline with the text, there will be issues with alignment. The images size will cause the text to have offocentered line height since it can’t have a width and height set and it will not respect top and bottom margins and padding.</p>
-			<p>Here is an example of the inline feature amongst some text:</p>
-			<p>I've repeated this code three times:</p>
-			<div class="code">
-				<p>&lt;img src="http://i.imgur.com/PxKbNMW.gif" alt="drop solution gif" /&gt;</p>
-				<p>&lt;img src="http://i.imgur.com/AKKWfmM.gif" alt="music vest gif" /&gt;</p>
-				<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
-				<p>&lt;img src="http://i.imgur.com/uFDk5NU.gif" alt="baby mop gif" /&gt;</p>
-				<p>&lt;img src="http://i.imgur.com/PuGoP.gif" alt="donut gif" /&gt;</p>
-			</div>
-			<p>Here is the output:<p></code>
-			<div class="inline-example">
-				<img src="http://i.imgur.com/PxKbNMW.gif" alt="drop solution gif" />
-				<img src="http://i.imgur.com/AKKWfmM.gif" alt="music vest gif" />
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<img src="http://i.imgur.com/uFDk5NU.gif" alt="baby mop gif" />
-				<img src="http://i.imgur.com/PuGoP.gif" alt="donut gif" />
-			</div>
-			<p>As you can see, the text and the images do not respect the margins and padding. To solve this, we have inline-block.</p>
-			<br>
-			<p id="inline-block"><strong>Inline-Block</strong></p>
-
-			<p>Inline-blocks respects the text between the images for the margins and padding all around. Using the same example code as above, but changing the parameter of display to inline-block, the text doesn't change its line height because of the size of the images.</p>
-
-			<div class="code">
-				<p>.code {display: inline-block;}</p>
-			</div>
-
-			<p>Here is an example of a images with the inline-block feature. This is broken up with text after two images. Warning, hilarity ensues via Reddit's <a href="http://www.reddit.com/r/wheredidthesodago/" id="wheredidthesodago">r/wheredidthesodago</a>.</p>
-			<br>
-			<div class="inline-block-example">
-				<img src="http://i.imgur.com/PxKbNMW.gif" alt="drop solution gif" />
-				<img src="http://i.imgur.com/AKKWfmM.gif" alt="music vest gif" />
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<img src="http://i.imgur.com/uFDk5NU.gif" alt="baby mop gif" />
-				<img src="http://i.imgur.com/PuGoP.gif" alt="donut gif" />
-			</div>
-			<p>Instead of having the images as their own blocks, if left by default (the block parameter is default for display in CSS), the images are inline to each other. The text gets its own line because I separated it with a paragraph tag, but everything is now properly justified. If you want to learn other solutions to this problem, I suggest you look up flexboxes.</p>
-			<br>
 			<hr>
-			<p id="last-week"><a href="week1_technical_blog.html">Last Week's Post</a></p>
+			<p id="last-week"><a href="week2_technical_blog.html">Last Week's Post</a></p>
 		</div>
 	</div>
 
