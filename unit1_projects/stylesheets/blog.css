@@ -11,6 +11,15 @@ h5 {
 	text-align: left;
 	line-height: 150%;
 }
+.blog-posts a {
+	text-decoration: none;
+	color: black;
+	background: #DDD;
+}
+.blog-posts a:hover {
+	background: #000;
+	color: white;
+}
 .blog-posts h3 {
 	font-size: 1.5em;
 	padding: 5px;
@@ -20,6 +29,7 @@ h5 {
 #intro, .blog-posts p {
 	font-size: 1em;
 	text-indent: 2em;
+	margin-bottom: 1em;
 }
 .blog-image {
 	text-align: center;
@@ -48,20 +58,24 @@ h5 {
 .block-example p, .block-example img {
 	display: block;
 }
-#last-week {
+#last-week, #next-week {
 	margin-top: 1em;
 	text-indent: 0;
+	display: inline-block;
 }
-#last-week a {
+#last-week a, #next-week a {
 	text-decoration: none;
 	color: white;
 	background: black;
 	padding: 5px;
 }
-#last-week a:hover {
+#last-week a:hover, #next-week a:hover {
 	text-decoration: none;
 	color: black;
 	background: white;
+}
+#next-week {
+	margin-left: 1em;
 }
 #wheredidthesodago {
 	text-decoration: none;
@@ -71,6 +85,9 @@ h5 {
 #wheredidthesodago:hover {
 	color: black;
 	background: white;
+}
+#resources {
+	margin: 10px 60px;
 }
 @media only screen and (min-width: 900px) {
 	.main-content {
