@@ -36,7 +36,7 @@
 			
 			<p> To enumerate something is to mention something one by one, like reciting your months of the years or saying the 50 states of the US in alphabetical order. Enumerables are the names of things, like in a list. This concept, while childish sounding, is actually a core concept in computer programming.</p>
 
-			<p>There's a general consensus that an enumerated type is kind of like the following example. You have a class roster in the Elementary class your teaching with the name of the students in alphabetical order by first name. We will agree that the first person's name on the list is "Ashley", followed by the second person's name, "Betty", and so on until the end of this list. If you've ever worked with arrays and hashes, you know already these are prime examples of enumerables. Enumerables are the class while arrays and hashes are the subclasses.</p>
+			<p>There's a general consensus that an enumerated type is kind of like the following example. You have a class roster in the Elementary class you're teaching with the names of the students in alphabetical order by first name. We will agree that the first person's name on the list is "Ashley", followed by the second person's name, "Betty", and so on until the end of this list. If you've ever worked with arrays and hashes, you know already these are prime examples of enumerables. Enumerables are the over-arching title of arrays and hashes in Ruby (without getting too much in detail about mixins and modules).</p>
 
 			<p>Do not confuse enumerable with enumerator, however. Those two concepts are much different, but I won't get into it here. An image below is an example of an enumerator in action.</p>
 
@@ -44,7 +44,7 @@
 
 			<p>This technical blog will go through the <strong><a href="http://ruby-doc.org/core-2.0/Enumerable.html#method-i-cycle">Enumerable#cycle</a></strong> feature. What we mean here is there is a method called cycle that can be used for enumerables. Looking through the documentation, it says "cycle(n=nil) { | obj | block } -> nil".</p>
 
-			<p>If we break this down, we can call the method cycle the same we would with any other method. It is optional if we want to add the number of times we cycle through (seen as n=nil) otherwise it will loop infinite. Then we pass in an object and a block that each cycle will do. A reminder, a block is a chunk of code that does something. Since we're passing an object, most likely we will be passing something through that. Also a reminder, in Ruby, almost everything is an object. Here is an example code that we could potentially run.</p>
+			<p>If we break this down, we can call the method cycle the same we would with any other method. It is optional if we want to add the number of times we cycle through (seen as n=nil) otherwise it will loop infinite. Then we pass in an object and a block that each cycle will do. Here is an example code that we could potentially run.</p>
 
 			<div class="code">
 				<p>a = ["3", "4", "5", "6"]</p>
@@ -52,9 +52,9 @@
 				<p>a.cycle(3)  { |v| puts v } #=> print, 3, 4, 5, 6, 3, 4, 5, 6, 3, 4, 5, 6</p>
 			</div>
 
-			<p>In our example, we created an array. We cycled through that array an infinite amount of times because we did not specify a condition where we would want it to stop. The second method call we specify 3 times to cycle through our block of code.</p>
+			<p>In our example, we created an array. We cycled through that array an infinite amount of times because we did not specify a condition where we would want it to stop. The next time we called this method, we specify that we want to cycle through our block 3 times.</p>
 
-			<p>Why in the world would you ever want an infinite loop? Say you have a program that takes vital signs as an input for a hospital patient. If the nurse needs to know if you're in a critical situation, you want to make sure that program is running all of the time.</p>
+			<p>Why in the world would you ever want the cycle an infinite number of times? Say you have a program that takes vital signs as an input for a hospital patient. If the nurse needs to know if you're in a critical situation, you want to make sure that program is running all of the time.</p>
 
 			<p>Another way we would use this method is by not passing a block at all. In the documentation, it says "cycle(n=nil) -> an_enumerator". The following is an example of something I found on <a href="http://stackoverflow.com/questions/4317439/cool-tricks-and-expressive-snippets-with-ruby-collections-enumerables">stock overflow</a></p>
 			
@@ -63,7 +63,7 @@
 				<p># => [[1, "cls1"], [2, "cls2"], [3, "cls1"], [4, "cls2"]]</p>
 			</div>
 			
-			<p>There is a method called zip here that merges one element into another. That aside, the cycle here will iterate the array ["cls1", "cls2"] to metch merging with the numbers one through four. Note, the example shows a shorthand of writing arrays. Really neat stuff.<p>
+			<p>There is a method called zip here that merges one element into another. That aside, the cycle here will iterate the array ["cls1", "cls2"] to match the number of merging elements, which in this case is the numbers one through four (as noted by 1..4). Note, the example shows a shorthand of writing arrays. Really neat stuff.<p>
 
 			<p>Now I hope you understand the importance of enumerables and the cycle method. Until next week, peace out!</p>
 
