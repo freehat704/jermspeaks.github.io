@@ -65,7 +65,7 @@ h5 {
 	display: block;
 }
 #disqus_thread {
-	margin: 0 50px;
+	padding: 0 50px;
 }
 #last-week, #next-week {
 	margin-top: 1em;
