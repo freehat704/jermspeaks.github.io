@@ -64,7 +64,7 @@ h5 {
 .block-example p, .block-example img {
 	display: block;
 }
-#disq-2 {
+#disqus_thread {
 	margin: 0 50px;
 }
 #last-week, #next-week {
