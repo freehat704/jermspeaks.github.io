@@ -64,8 +64,8 @@ h5 {
 .block-example p, .block-example img {
 	display: block;
 }
-#comments {
-	margin: 0 3em;
+#comments script {
+	margin: 0 50px;
 }
 #last-week, #next-week {
 	margin-top: 1em;
