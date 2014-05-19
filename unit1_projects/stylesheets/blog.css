@@ -35,7 +35,7 @@ h5 {
 	margin-bottom: 1em;
 }
 #small-font {
-	font-size: .5em;
+	font-size: .65em;
 }
 .blog-image {
 	text-align: center;
@@ -57,6 +57,16 @@ h5 {
 	border: 1px solid white;
 	color: black;
 	margin: 1em;
+}
+.quote {
+	font-size: .9em;
+	font-style: italic;
+	font-family: helvetica, serif;
+	border-left: thick solid #333;
+	padding: 0 1em;
+}
+.quote-source {
+	text-align: right;
 }
 .inline-example img, .inline-example p {
 	display: inline;

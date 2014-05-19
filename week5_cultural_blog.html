@@ -32,7 +32,7 @@
 
 			<h5>Date: May 21st, 2014</h5>
 
-			<p>About a year ago, I watched <a href="https://www.youtube.com/watch?v=Kf9KjCKmDcU" target="_blank">this Youtube series</a> on cryptography explaining the progression of this subject over the last few centuries. The series is now on <a href="https://www.khanacademy.org/computing/computer-science/cryptography" target="_blank">Khan Academy</a>. Last week, we worked on a substitution cipher, a fairly simple concept involving the shift of the alphabet by a specified number. The image below give an example of this.</p>
+			<p>About a year ago, I watched <a href="https://www.youtube.com/watch?v=Kf9KjCKmDcU" target="_blank">this Youtube series</a> explaining the progression of cryptography over the last few centuries. The entire series is now on <a href="https://www.khanacademy.org/computing/computer-science/cryptography" target="_blank">Khan Academy</a> if you want to check it out. Last week, we worked on a substitution cipher, a fairly simple concept involving the shift of the alphabet by a specified number. The image below give an example of this.</p>
 
 			<div class="blog-image">
 				<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/ROT13.png/300px-ROT13.png" alt="Substitution cipher example"/>
@@ -40,7 +40,7 @@
 
 			<p>When I was a kid living in Berkeley, I used to pick up my parent's subscription to the SF Chronicle and go straight to the comics. Underneath the comics was the cryptogram puzzle.* The Chronicle's version of this game was to permutate the letters so each letter was a different letter. This is another form of the substitution ciphers. I noticed that there were patterns that started to emerge after doing a dozen or so of these. A few letters were always more noticable than others. For example, if the first word in the sentence started with a three letters, it was almost always "The". That would mean I would easily attain three letters, and I would start filled out the rest of the puzzle with these three letters. After staring at the puzzle for a few minutes other words and letters that were frequent started appearing as well. I used the frequency of letters that are used more than others I learned from watching one too many episodes of wheel of fortune (and playing a few games of scrabble) to think of what frequent letters on the cryptogram might be.</p>
 
-			<p id="small-font">*Beside the cryptogram was the crossword puzzle. I really did not have a knack for words.<p>
+			<p id="small-font">*Beside the cryptogram was the crossword puzzle. I really did not have a knack for words.</p>
 
 			<div class="blog-image">
 				<iframe width="560" height="315" src="//www.youtube.com/embed/HOuo_3UmIuE" frameborder="0" allowfullscreen></iframe>
@@ -52,9 +52,65 @@
 				<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/English_letter_frequency_%28alphabetic%29.svg/1200px-English_letter_frequency_%28alphabetic%29.svg.png" width="445px" height="356px" alt="Frequency analysis of the English Alphabet"/>
 			</div>
 
-			<p>You may recall when we first set-up our Github accounts with our terminal, we had to create a private RSA key.</p>
+			<p>It turns out, cryptography is still used today in the form of Internet security. Businesses rely on cryptography to carry out private transactions. Secret organizations rely on it for delivering messages. We rely on it to access our bank accounts. If you know nothing about cryptography before coming to Dev Bootcamp, you may see Internet security as this black box. And if you're like me, you don't want the wrong people going into your bank account. But modern day cryptography does not rely on substitution ciphers anymore, so you don't have to be freigtened.*</p>
 
+			<p id="small-font">*Just yet.</p>
+
+			<p>Today, security can be traced back to the creation of two things: <a href="http://en.wikipedia.org/wiki/RSA_(algorithm)" target="_blank">the RSA algorithm</a> and <a href="http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange" target="_blank">the Diffie-Hellman key exchange</a>. You may recall when we first set-up our Github accounts with our terminal, we had to create a private RSA key. Well, modern cryptography relies on public key exchanges while each party retains a private key.</p>
+
+			<div class="blog-image">	
+				<iframe width="420" height="315" src="//www.youtube.com/embed/MsqqpO9R5Hc" frameborder="0" allowfullscreen></iframe>
+			</div>
+
+			<p>As pointed out in the video, we can accomplish sending encrypted messages back and forth by sending an attached public key (encryption key). With this key, each party can use their private key(decryption key) to unlock the message. Without a private key, a third party who retrieves this message will find it too hard to open this message. This type of function is called a <a href="http://en.wikipedia.org/wiki/Trapdoor_function" target="_blank">one-way function, also known as trap door function</a>. This is the basics of the Diffie-Hellman key exchange. The RSA algorithm makes this achievable.</p>
 			
+			<div class="quote">
+				<p><quote>"What you need for a public key cryptographic system to work is a set of algorithms that is easy to process in one direction but difficult to undo. In the case of RSA, the easy algorithm multiplies two prime numbers. If multiplication is the easy algorithm, its difficult pair algorithm is factoring the product of the multiplication into its two component primes. Algorithms that have this characteristic—easy in one direction, hard the other—are known as trapdoor functions. Finding a good trapdoor function is critical to making a secure public key cryptographic system. Simplistically, the bigger the spread between the difficulty of going one direction in a trapdoor function and going the other, the more secure a cryptographic system based on it will be."</quote></p>
+				<p class="quote-source"><a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/" target="_blank">-- Nick Sullivan, Ars Technica</a></p>
+			</div>
+
+			<p>Basically, we need large prime numbers. Like orders of magnitude big. Even with our powerful computers, we still can't unlock these keys without centuries of constant computing. However, even if the algorithm may take very long to crack, there aren't other exploits to it. You can read about some of these <a href="http://en.wikipedia.org/wiki/RSA_(cryptosystem)#Security_and_practical_considerations" target="_blank">areas of weakness on Wikipedia</a>. The NSA (National Security Administration), <a href="http://www.theverge.com/2013/7/17/4517480/nsa-spying-prism-surveillance-cheat-sheet" target="_blank">besides the news on a massive surveillance system, PRISM</a>, has made leaps in cracking most of our security on the Internet.</p>
+
+			<div class="quote">
+				<p><quote>"The agency has circumvented or cracked much of the encryption, or digital scrambling, that guards global commerce and <strong>banking systems</strong>, protects sensitive data like trade secrets and medical records, and automatically secures the e-mails, Web searches, Internet chats and phone calls of Americans and others around the world, the documents show."</quote></p>
+				<p class="quote-source"><a href="http://www.nytimes.com/2013/09/06/us/nsa-foils-much-internet-encryption.html" target="_blank">-- Nicole Perlroth, Jeff Larson And Scott Shane, New York Times</a></p>
+			</div>
+
+			<p>One way they have accomplished this has been to release toolkits and data protection managers that the NSA engineered <a href="http://arstechnica.com/security/2013/09/stop-using-nsa-influence-code-in-our-product-rsa-tells-customers/" target="_blank">their own back door</a> to.</p>
+
+			<div class="quote">
+				<p><quote>"But internal memos leaked by a former N.S.A. contractor, Edward Snowden, suggest that the N.S.A. generated one of the random number generators used in a 2006 N.I.S.T. standard — called the Dual EC DRBG standard — which contains a back door for the N.S.A. In publishing the standard, N.I.S.T. acknowledged “contributions” from N.S.A., but not primary authorship."...</quote></p>
+				<p><quote>"At the time, Canada’s Communications Security Establishment ran the standards process for the international organization, but classified documents describe how ultimately the N.S.A. seized control. “After some behind-the-scenes finessing with the head of the Canadian national delegation and with C.S.E., the stage was set for N.S.A. to submit a rewrite of the draft,” the memo notes. 'Eventually, N.S.A. became the sole editor.'"</quote></p>
+				<p class="quote-source"><a href="http://bits.blogs.nytimes.com/2013/09/10/government-announces-steps-to-restore-confidence-on-encryption-standards/" target="_blank">-- Nicole Perlroth, New York Times</a></p>
+			</div>
+
+			<p>On top of that, <a href="http://heartbleed.com/" target="_blank">the Heartbleed bug</a> is one of the most recent exploits in our security system. It specifically exploits <a href="http://www.digicert.com/ssl-cryptography.htm" target="_blank">SSL</a>, which is an implementation of public key exchanges.</p>
+
+			<div class="blog-image">
+				<img src="http://heartbleed.com/heartbleed.png" alt="Heartbleed logo"/>
+			</div>
+
+			<p>What I'm getting at here is we don't have robust implementation of our crypto-security systems. But we don't have to be up in arms and to forgo all web services.* We need to have awareness of these issues in practical terms, not just blind faith this thing is supposed to work as we imagine it to. Understand the basics of this and update your algorithms and protocols accordingly.</p>
+
+			<p id="small-font">*Unless you're my dad.</p>
+
+			<h3>Extra Content</h3>
+
+			<p>Another issue with our Internet security is the size of our encryption. While it's okay to have large keys for desktops and laptops, mobile is growing big. Since our keys are big, we need lots of processing power to make these exchanges. A potential alternative to RSA (which piggys on large prime numbers) is to use elliptic curve cryptography (ECC). <a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/" target="_blank">Ars Technica</a> has a very concise and easy to follow write-up on how exactly it works. Here's the problem with this technology though.</p>
+
+			<div class="quote">
+				<p><quote>"However, support for ECC is still very problematic. Much of the technology is patented by BlackBerry, and those patents are enforced. There are certain narrow licenses available for implementations of ECC that meet various US government criteria, but the broader patent issues have led some vendors to refuse to support the technology."</quote></p>
+				<p class="quote-source"><a href="http://arstechnica.com/security/2013/08/crytpo-experts-issue-a-call-to-arms-to-avert-the-cryptopocalypse/" target="_blank">-- Peter Bright, Ars Technica</a></p>
+			</div>
+
+			<p>There's no panacea, or a cure all, to our problems. But if we are to make a more robust system, we need to start somewhere.</p>
+
+			<h3>Additional resources:</h3>
+				<ul>
+					<li><a href="http://www.dailydot.com/politics/nsa-rsa-encryption-crack-prime-numbers/" target="_blank">Did the NSA secretly make a major math breakthrough?</a></li>
+					<li><a href="http://arstechnica.com/security/2013/08/crytpo-experts-issue-a-call-to-arms-to-avert-the-cryptopocalypse/" target="_blank">
+Crypto experts issue a call to arms to avert the cryptopocalypse</a></li>
+				</ul>
 
 			<hr>
 			<p id="last-week"><a href="week4_cultural_blog.html">Previous Post</a></p>
