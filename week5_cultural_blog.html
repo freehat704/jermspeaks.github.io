@@ -32,6 +32,8 @@
 
 			<h5>Date: May 21st, 2014</h5>
 
+			<p class="small-font">I've included a shortened Q&amp;A at the end of this article for DBC questions.</p>
+
 			<p>About a year ago, I watched <a href="https://www.youtube.com/watch?v=Kf9KjCKmDcU" target="_blank">this Youtube series</a> explaining the progression of cryptography over the last few centuries. The entire series is now on <a href="https://www.khanacademy.org/computing/computer-science/cryptography" target="_blank">Khan Academy</a> if you want to check it out. Last week, we worked on a substitution cipher, a fairly simple concept involving the shift of the alphabet by a specified number. The image below give an example of this.</p>
 
 			<div class="blog-image">
@@ -40,7 +42,7 @@
 
 			<p>When I was a kid living in Berkeley, I used to pick up my parent's subscription to the SF Chronicle and go straight to the comics. Underneath the comics was the cryptogram puzzle.* The Chronicle's version of this game was to permutate the letters so each letter was a different letter. This is another form of the substitution ciphers. I noticed that there were patterns that started to emerge after doing a dozen or so of these. A few letters were always more noticable than others. For example, if the first word in the sentence started with a three letters, it was almost always "The". That would mean I would easily attain three letters, and I would start filled out the rest of the puzzle with these three letters. After staring at the puzzle for a few minutes other words and letters that were frequent started appearing as well. I used the frequency of letters that are used more than others I learned from watching one too many episodes of wheel of fortune (and playing a few games of scrabble) to think of what frequent letters on the cryptogram might be.</p>
 
-			<p id="small-font">*Beside the cryptogram was the crossword puzzle. I really did not have a knack for words.</p>
+			<p class="small-font">*Beside the cryptogram was the crossword puzzle. I really did not have a knack for words.</p>
 
 			<div class="blog-image">
 				<iframe width="560" height="315" src="//www.youtube.com/embed/HOuo_3UmIuE" frameborder="0" allowfullscreen></iframe>
@@ -54,7 +56,7 @@
 
 			<p>It turns out, cryptography is still used today in the form of Internet security. Businesses rely on cryptography to carry out private transactions. Secret organizations rely on it for delivering messages. We rely on it to access our bank accounts. If you know nothing about cryptography before coming to Dev Bootcamp, you may see Internet security as this black box. And if you're like me, you don't want the wrong people going into your bank account. But modern day cryptography does not rely on substitution ciphers anymore, so you don't have to be freigtened.*</p>
 
-			<p id="small-font">*Just yet.</p>
+			<p class="small-font">*Just yet.</p>
 
 			<p>Today, security can be traced back to the creation of two things: <a href="http://en.wikipedia.org/wiki/RSA_(algorithm)" target="_blank">the RSA algorithm</a> and <a href="http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange" target="_blank">the Diffie-Hellman key exchange</a>. You may recall when we first set-up our Github accounts with our terminal, we had to create a private RSA key. Well, modern cryptography relies on public key exchanges while each party retains a private key.</p>
 
@@ -84,15 +86,15 @@
 				<p class="quote-source"><a href="http://bits.blogs.nytimes.com/2013/09/10/government-announces-steps-to-restore-confidence-on-encryption-standards/" target="_blank">-- Nicole Perlroth, New York Times</a></p>
 			</div>
 
-			<p>On top of that, <a href="http://heartbleed.com/" target="_blank">the Heartbleed bug</a> is one of the most recent exploits in our security system. It specifically exploits <a href="http://www.digicert.com/ssl-cryptography.htm" target="_blank">SSL</a>, which is an implementation of public key exchanges.</p>
+			<p>Let's be honest here. If the NSA has the capability to create exploits like this, what about the bad guys? On top of that, <a href="http://heartbleed.com/" target="_blank">the Heartbleed bug</a> is one of the most recent exploits in our security system. It specifically exploits <a href="http://www.digicert.com/ssl-cryptography.htm" target="_blank">SSL</a>, which is an implementation of public key exchanges.</p>
 
 			<div class="blog-image">
 				<img src="http://heartbleed.com/heartbleed.png" alt="Heartbleed logo"/>
 			</div>
 
-			<p>What I'm getting at here is we don't have robust implementation of our crypto-security systems. But we don't have to be up in arms and to forgo all web services.* We need to have awareness of these issues in practical terms, not just blind faith this thing is supposed to work as we imagine it to. Understand the basics of this and update your algorithms and protocols accordingly.</p>
+			<p>What I'm getting at here is we don't have robust implementation of our crypto-security systems. But we don't have to be up in arms and to forgo all web services.* We need to have awareness of these issues in practical terms, not just blind faith this thing is supposed to work as we imagine it to. Understand the basics of this and update your algorithms and protocols accordingly. I think this is the best we can do as developers if we don't specifically work on Internet security.</p>
 
-			<p id="small-font">*Unless you're my dad.</p>
+			<p class="small-font">*Unless you're my dad.</p>
 
 			<h3>Extra Content</h3>
 
@@ -104,6 +106,12 @@
 			</div>
 
 			<p>There's no panacea, or a cure all, to our problems. But if we are to make a more robust system, we need to start somewhere.</p>
+
+			<h3>Q&amp;A</h3>
+
+			<p>What is the problem? The tech world has a lot of major flaws in its security for the Internet.</p>
+			<p>What is some background about this? Please refer to the blog post above.</p> 
+			<p>What are some potential solutions? General awareness and technical understanding, if possible, is one solution. Another is the implementation of a new algorithm, like ECC. Other solutions would be asking really smart mathematicians :-)</p>
 
 			<h3>Additional resources:</h3>
 				<ul>
