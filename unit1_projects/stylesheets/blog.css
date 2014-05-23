@@ -52,6 +52,9 @@ h5 {
 .code {
 	font-family: sans-serif;
 }
+.code img {
+	max-width: 100%;
+}
 .code, .inline-example, .inline-block-example, .block-example {
 	background: #c0d9ec;
 	border: 1px solid white;
