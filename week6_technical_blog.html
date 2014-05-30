@@ -28,42 +28,28 @@
 	<hr>
 	<div class="main-content">
 		<div class="blog-posts">
-			<h3><u>An example of a class in Ruby</u></h3>
+			<h3><u>Programming Paradigms</u></h3>
 
-			<h5>Date: May 23rd, 2014</h5>
+			<h5>Date: May 30th, 2014</h5>
 			
-			<p id="intro">One of the things I got to do in my last career was manufacturing stents. The basics of a stent is to open up a passage way in an artery that has been clogged. Here's a picture of a stent.</p>
+			<p id="intro">So you've had some experience with Object-Oriented Programming (OOP) this week. Some consider Functional programming the opposite of OO - compare them.</p>
 
-			<img src="http://blogs.scientificamerican.com/media/inline/blog/Image/coronary-stent-475.jpg" alt="stent in deployment" />
-			
-			<p>At this last job, our company got an order for a shipment of stents and as engineers, it would be our jobs to figure out how to make this shipment of stents. Usually we're given a design (Computer-aided design or CAD file) and we would turn it into something we could manufacture using CNC machines (developing a computer-aided manufacturing, or CAM file). There are tons of other aspects here for the minute details of manufacturing.</p>
+			<p>Procedural programming is a programming paradigm where the user inputs steps to get to a desired outcome. There's not much room to change the code without doing an overhaul if something changes with the desired outcome. Say you have historical data for weather patterns in your area and you wanted to output the total amount of annual rainfall. You program it and realize you changed your mind and want to map both an average daily rainfall and daily total temperature fluctuation. Well, now you've got to go back into the code and start deleting steps that you've already coded, and the code turns out much longer.</p>
 
-			<p>One of the things I got to do was create lead times for our customers to see how long it would take to create a shipment of stents given the material type and the amount they wanted. There were a lot more parameters, but to make this example easier, I choose two things everyone could understand. The material for stents remains predominately a metal polymer, although bioabsorbable polymers are starting to come into the market. The amount is usually in large batches in the thousands.<p>
+			<p>Now say you know you want multiple outcome of your data, like annual rainfall, extrema points of highs and lows for each month, and high wind speeds of the month from a data set. Well, you can create functions for each of these things. This is the basis of functional programming. An interesting point is the data isn't mutable because the variables in the function are local, at least in Ruby. The problem with functional programming is if we introduce something new, like storm data that affects all functions, now we've got to update all of the parameters in our functions.</p>
 
-			<p>In Ruby, through object-oriented design (OOD), we can create a class with behaviors, otherwise known as methods. A class in Ruby would encompass something tangible, like a gear on a bike, but usually isn't large enough to inclde all components (which is where modules come in). In the book "Practical Object-Oriented Design in Ruby," "A class should do the smallest possible useful thing; that is, it should have a single responsibility." I've created a class called stents and included some behaviors of stent manufacturing. Take a look at the code below.</p>
+			<p>Let's say we put all of the attributes of the data into a class and put all of our functions inside of the class. Now you've got the basis of object-oriented programming. If we introduce new data parameters, we can initialize it fairly easily without much fuss. We can use variables within different functions of a class, called methods in Ruby, by declaring instance variables. If we know what operations we want on our things or objects, we can evolve our code to add more things by adding new classes. The problem comes when we want to add functionality to our objects. Now we may need to update all of our classes with this new function.</p>
 
-			<div class="code">
-				<img src="unit1_projects/images/screenshot.png" alt="sample ruby class code"/>
+			<p><em>Which one is better?</em> The answer is 'it depends.' What are you trying to accomplish? If you're going for repetitive tasks like recursion, functional programming is better. There are languages that handle that type of computation, like Haskell and Erlang. For objects driven with behavior, object-oriented programming is better. This includes langages like Ruby and Python. The important lesson here is to understand what you're trying to build before programming.</p>
+
+			<p>I've included a video to Sandi Metz talking about object-oriented design, OOD. This talk is about how code changes as you roll along your project.</p>
+
+			<div class="blog-image">
+				<iframe src="//player.vimeo.com/video/53154357" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/53154357">Less - The Path to Better Design</a> from <a href="http://vimeo.com/user4280938">&Oslash;redev Conference</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 			</div>
 
-			<p>I've created a class called 'CoronaryStent', which is a type of stent for the coronary arteries (arteries for the heart). For this class, I've initiated two parameters the user must input. These inputs are used to calculate how long it will take to make these stents, using my old job's machinery. These numbers are inflated, and the parameters are not accurate, but this is just to demonstrate how classes work in Ruby (otherwise, I'd be sued for breaking my NDA).</p>
-
-			<p>Three of these methods are private because I do not want the user to be able to call these methods. Instead, I've combined them in the method 'manf_duration', because that's what the customer wants. The three methods are 'supplier', 'quantity', and 'total_time'. Each of these methods should do what I want them to. With 'supplier', I want to know how long it will take to actually have the raw tubing from a vendor. In quantity, I want to know how long it will take our normal manufacturing process, in total time including QA, it will take for a specific quantity amount. Lastly, the total_time method just prints out the total time created with the first two methods.<p>
-
-			<p>Within a class, we can use instance variables that can be shared between each methods. This is denoted by an '@' symbol before the variable name. Local variables, or variables in a method, can only be called within that method. Local variables can not be called outside the method. Global variables can be called anywhere, within a method or outside of it. They are denoted with a '$' sign before the variable name.</p>
-
-			<p>The variable we are manipulating here is '@time' because we want it to increase with each method it goes through.</p>
-
-			<p>Lastly, I've included driver code to see how long it will take to manufacture 1,500 nitinol stents through this company. The output should be 2.0 weeks. And in fact, after running through the console, that's what I get.</p>
-
-			<p>Cool side note:</p>
-			<p>Nitinol, short for Nickel titanium, was discovered in 1959 by researchers at the Naval Ordnance Laboratory. Initially, the purpose was for military and defense. Two specific properties that make this material unique is its superelasticity and shape memory property. This material can take lots of bending before it actually makes a dent (meaning you can crumple it and it will turn back into its original form). Shape memory means you can "teach" the piece of nitinol to retain a specific shape, say in the form of a stent. Look it up; science!</p>
-
-			<p>Second side thing: When modeling nature or systems, we want to be careful how we're going to define a class, a module, etc. One of the things I want to get into was modeling nature with code. We get close to the realm of philosophy in determining objects and its metaphysical state. <a href="http://shiffman.net/" target="_blank">Daniel Shiffman</a>, a professor at NYU for their ITP program, wrote <a href="http://natureofcode.com/" target="_blank">a book on this topic</a> using Python. I'm reading through it now and I highly recommend it.</p>
-
-
 			<hr>
-			<p id="last-week"><a href="week4_technical_blog.html">Last Week's Post</a></p>
+			<p id="last-week"><a href="week5_technical_blog.html">Last Week's Post</a></p>
 			<!-- <p id="next-week"><a href="week5_technical_blog.html">Next Week's Post</a></p> -->
 		</div>
 	</div>
