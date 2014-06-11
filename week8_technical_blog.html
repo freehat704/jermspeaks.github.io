@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<html>
+
+<head>	
+	<title>Tecnikc@l Bl0g</title>
+	<link rel="stylesheet" type="text/css" href="unit1_projects/stylesheets/reset.css">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400, 800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="unit1_projects/stylesheets/mains.css">
+	<link rel="stylesheet" type="text/css" href="unit1_projects/stylesheets/blog.css">
+</head>
+
+<body>
+	<header>
+		<h1>Jeremy Wong</h1>
+		<hr>
+		<h2>Not An Artist At Large</h2>
+	</header>
+	<hr>
+	<nav>
+		<ul>
+			<a href="index.html"><li>Main Page</li></a>
+			<a href="#contact"><li id="last-nav">Contact</li></a>
+		</ul>
+	</nav>
+	<hr>
+	<div class="main-content">
+		<div class="blog-posts">
+			<h3><u>Free-For-All Blog Topic: Big O Complexity and Notation</u></h3>
+
+			<h5>Date: June 11th, 2014</h5>
+
+			<p>This week's technical blog is a free-for-all. I looked at the list of topics, and being too lazy to choose my own, I've decided to talk about Big I Complexity and Notation. The decision came about because it was something I had never heard about and something I haven't written about before (I've written a blog post on Web Security a few weeks ago and I've written a bit about regular expressions).</p>
+
+			<p><strong>Complexity</strong></p>
+
+			<p>Even with all of our processing power, memory and network advances over the past few decades, we don't want to waste resources from inefficiency. In my simulations class in college, the professor lectured about inefficiencies in algorithms. Back in the day when memory was really expensive (relative to today's storage capacities), you wanted code that could give the desired output in the lowest time cost. More processing time meant fewer simulations. We were given the principles behind refactoring, but we never utilized them.</p>
+
+			<p>We need to differentiate performance and complexity. Performance is characterized by how much time, memory, disk space, and other processes are used when the program is running. Complexity involves scaling. How do resource requirements change when the algorithm grows? What happens when the problem being solved becomes larger? Complexity affects performance, but not vice versa.</p>
+
+			<p>The time required by a method is proportional to the number of basic operations it must perform (e.g. one test, one read, one write, one arithmetic operation). When the method performs the same tasks every time they are called, we call this constant time.</p>
+
+			<p>When methods are performing different number of operations, the performance changes. Two factors affect the number of operations being performed: problem size and input size. Looking at our algorithms, we need to ask how does the number of operations relate to the problem size? For simple tasks, like the flatten method in Ruby, the same operations will be performed everytime. For more complex methods that include blocks, procs, or lambdas, this could change the number of operations being performed. In the linear-time method, if the problem size doubles, the number of operations also double. In the quadratic-time method, if the problem size doubles, the number of operations triples, or quadrupals, or is something larger than doubles. When accessing complexity, we want to look at the worst case, or methods with high complexity.</p>
+
+			<p><strong>Big-O Notation</strong></p>
+
+			<p>Complexity is expressed through the Big-O Notation. I took the following list from a class at the University of Wisconsin-Madison. Link found in resources.</p>
+			<p><ul>
+				<li>a constant-time method is "order 1": O(1)</li>
+				<li>a linear-time method is "order N": O(N)</li>
+				<li>a quadratic-time method is "order N squared": O(N<sup>2</sup>)</li>
+			</ul></p>
+
+			<p>For the big-O notation, we're looking at the worst-case scenario. As mentioned above on how this works, we look at the method that will take the most time and that will be our order for the algorithm. There's a fourth notation, which is O(log N) which explains a time method scaled logorithmically. When the input size grows, the number of operations may be a lot less. One example is binary searches, which follows this pattern: "an input data set containing 10 items takes one second to complete, a data set containing 100 items takes two seconds, and a data set containing 1000 items will take three seconds." (<a href="http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/" target="_blank">Rob Bell</a>)</p>
+
+			<p>In terms of implementation, here is an image of someone qualifying their program algorithms with this notation. This chart can be helpful for areas to refactor, resource allocation, etc.</p>
+
+			<div class="blog-image">
+				<img src="http://www.programcreek.com/wp-content/uploads/2013/03/arraylist-vs-linkedlist-complexity.png" alt="Chart in Big-O for a Java program"/>
+			</div>
+
+			<p><strong>Resources:</strong></p>
+
+			<p>
+				<ul>
+					<li><a href="http://pages.cs.wisc.edu/~vernon/cs367/notes/3.COMPLEXITY.html" target="_blank">Complexity and Big-O Notation</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Big_O_notation" target="_blank">Wikipedia on Big-O Notation</a></li>
+					<li><a href="http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/" target="_blank">A Beginner’s Guide to Big O Notation</a></li>
+				</ul>
+			</p>
+
+			<hr>
+			<p id="last-week"><a href="week7_technical_blog.html">Last Week's Post</a></p>
+			<!-- <p id="next-week"><a href="week9_technical_blog.html">Next Week's Post</a></p> -->
+		</div>
+	</div>
+
+	<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	    var disqus_shortname = 'jermspeaksgithub'; // required: replace example with your forum shortname
+
+	    /* * * DON'T EDIT BELOW THIS LINE * * */
+	    (function () {
+	        var s = document.createElement('script'); s.async = true;
+	        s.type = 'text/javascript';
+	        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	    }());
+	    </script>
+
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'jermspeaksgithub'; // required: replace example with your forum shortname
+
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+	<div class="contact" id="contact">
+		<div class="contact-head"><h5><strong><u>Contact Information</u></h5></strong></div>
+		<ul>
+			<a href="mailto:jeremy@jermspeaks.com"><li>&#9993; Email</li></a>
+			<a href="http://www.facebook.com/jermwong" target="_blank"><li class="facebook"><img src="unit1_projects/images/fb.png" alt="facebook" /> Facebook</li></a>
+			<a href="http://twitter.com/jermspeaks/" target="_blank"><li class="twitter" id="last-contact"><img src="unit1_projects/images/twitter.png" alt="twitter" /> Twitter</li></a>
+		</ul>
+	</div>
+	
+	<footer id="copyright" class="grid-12">
+		<h6><p>&copy; 2014 Craft By Zen Company. All Rights Reserved.</p></h6>
+	</footer>
+</body>
+</html>
+
+<!-- Technical Blog stuff:
+	
+	-->
